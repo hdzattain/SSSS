@@ -19,52 +19,53 @@
    cd whatsapp‑dify‑bot
 2. 安装依赖
 
-```bash
-npm install
+   ```bash
+   npm install
 3. 配置环境变量
 
-```bash
-cp .env.example .env
+   ```bash
+   cp .env.example .env
 打开 .env，填写你的 DIFY_API_KEY 等信息。
 
 4. 启动机器人
 
-```bash
-npm start
+   ```bash
+   npm start
 启动后在控制台会出现二维码，扫描登录 WhatsApp。
 
 在群/私聊中发送消息，机器人会把你发的内容发送到 Dify 并返回结构化结果。
 
 5. 项目结构
-```bash
-.
-├── index.js         # 入口脚本
-├── package.json
-├── .env.example
-├── .gitignore
-└── logs/            # （可选）消息日志
-环境变量
+   ```bash
+   .
+   ├── index.js         # 入口脚本
+   ├── package.json
+   ├── .env.example
+   ├── .gitignore
+   └── logs/            # （可选）消息日志
+6.环境变量
 请在项目根目录新建 .env，主要变量：
 
-```dotenv
-
-DIFY_API_KEY=your_dify_api_key
-DIFY_BASE_URL=https://api.dify.ai/v1   # 如不修改可以不填
-LOG_WHATSAPP_MSGS=true                  # 是否记录收到的 whatsapp 消息到 logs/whatsapp.log
-依赖
-whatsapp-web.js
-
-axios
-
-form-data
-
-mime-types
-
-dotenv
-
-fs-extra
-
-qrcode-terminal
+   ```dotenv
+   
+   DIFY_API_KEY=your_dify_api_key
+   DIFY_BASE_URL=https://api.dify.ai/v1   # 如不修改可以不填
+   LOG_WHATSAPP_MSGS=true                  # 是否记录收到的 whatsapp 消息到 logs/whatsapp.log
+7.依赖
+   ```bash
+   whatsapp-web.js
+   
+   axios
+   
+   form-data
+   
+   mime-types
+   
+   dotenv
+   
+   fs-extra
+   
+   qrcode-terminal
 
 License
 MIT © hdzattain
